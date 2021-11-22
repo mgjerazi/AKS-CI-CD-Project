@@ -1,0 +1,9 @@
+- name: Copy frontend app
+  copy:
+    src: files/quiz-frontend/
+    dest: /usr/share/nginx/html/
+
+- name: Copy nginx config
+  copy:
+    src: files/default.conf
+    dest: /etc/nginx/sites-available/default

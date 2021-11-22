@@ -1,0 +1,12 @@
+- name: Create app directory
+  file:
+    path: /opt/quiz-app
+    state: directory
+
+- name: Copy backend app
+  copy:
+    src: files/backend.jar
+    dest: /opt/quiz-app/backend.jar
+
+- name: Run java app
+  shell: java -jar /opt/quiz-app/backend.jar &
