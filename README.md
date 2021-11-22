@@ -4,8 +4,6 @@
 
 This Project is separated in two parts
 
-#Part 1
-
 Goal of this mid project is to deploy a real application in Azure Cloud using AKS.
 
 We will deploy Quiz game, prepared as two separate modules:
@@ -16,7 +14,7 @@ By design, Java + Spring Boot applications can be packed to single .jar file tha
 Other one is frontend module, written using Angular Framework. It uses Typescript and all other regular Angular tools for building (npm). 
 See repository README file for details.
 
-Goals :
+#Part 1
 
 Prepare Dockerfile for backend module, so it can be used to build backend Docker image. 
 Run a Docker container with this image locally and check if it works. 
