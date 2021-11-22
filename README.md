@@ -6,7 +6,7 @@
 
 
 
-# Goal of this project is to deploy an application in Azure Cloud using AKS using Docker, Ansible, Terraform and CI/CD Pipelines.
+# Goal of this project is to deploy an application in Azure Cloud using AKS, Docker, Ansible, Terraform and CI/CD Pipelines.
 
 
 Backend module with Java 11 and uses Spring Boot library.
