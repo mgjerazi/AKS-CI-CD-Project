@@ -4,7 +4,7 @@
 
 This Project is separated in two parts
 
-Part 1
+#Part 1
 
 Goal of this mid project is to deploy a real application in Azure Cloud using AKS.
 
@@ -53,7 +53,7 @@ Get credentials to manage lh1al.xyz domain and configure domain and Kubernetes t
 Add TLS certificate to your site, so it can be used not only via HTTP, but also via HTTPS. In order to do that, you should have a look at 
 Let’s Encrypt (free certificate issuer) and automated way to use it – cert-manager. Note that you need to complete previous point (custom domain) before doing this one.
 
-Part 2
+#Part 2
 
 Terraform configuration to create all required resources
 Bash script that will create a new cluster for your application and deploy to AKS in it a single command
