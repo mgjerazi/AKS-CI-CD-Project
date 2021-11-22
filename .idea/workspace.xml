@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="ingress namespace config">
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="terraform and bash scripts">
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/output.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/terraform.tfvars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_bash_script.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/output.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/scripts/backend.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/scripts/deploymet_ingress.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/scripts/frontend.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/scripts/get_helm.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/scripts/ingress.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/terraform.tfvars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +45,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1zgHKupj5uD2y3efm9loe19TXyk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -149,6 +169,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nginx conf" />
     <MESSAGE value="ingress namespace config" />
-    <option name="LAST_COMMIT_MESSAGE" value="ingress namespace config" />
+    <MESSAGE value="terraform and bash scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="terraform and bash scripts" />
   </component>
 </project>
