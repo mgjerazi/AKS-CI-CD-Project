@@ -1,0 +1,21 @@
+ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/merkato adminuser@20.107.217.246
+ssh adminuser@20.107.217.246
+
+ansible all -m ping -K
+ansible-playbook site.yml -K
+
+2. Backend build
+
+./mvnw package
+
+mv ~/Desktop/final/3.\ app/quiz-backend/target/quiz-0.0.1-SNAPSHOT.jar ~/Desktop/final/2.\ ansible/roles/deploy-backend/files/backend.jar
+
+3. Frontend build
+
+npm install
+npm install --save jquery
+npm run build
+
+cp -a ~/Desktop/final/3.\ app/quiz-frontend/dist/quiz-frontend ~/Desktop/final/2.\ ansible/roles/deploy-frontend/files/
+

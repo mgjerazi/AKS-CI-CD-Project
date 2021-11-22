@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="terraform and bash scripts">
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/output.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/providers.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/terraform.tfvars" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_bash_script.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/output.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/providers.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/scripts/backend.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/scripts/deploymet_ingress.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/scripts/frontend.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/scripts/get_helm.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/scripts/ingress.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/terraform.tfvars" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="read me file update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634889744404</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="terraform and bash scripts">
+      <created>1637579902753</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637579902753</updated>
+    </task>
+    <task id="LOCAL-00005" summary="read me file update">
+      <created>1637579991565</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637579991565</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +165,7 @@
     <MESSAGE value="nginx conf" />
     <MESSAGE value="ingress namespace config" />
     <MESSAGE value="terraform and bash scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="terraform and bash scripts" />
+    <MESSAGE value="read me file update" />
+    <option name="LAST_COMMIT_MESSAGE" value="read me file update" />
   </component>
 </project>

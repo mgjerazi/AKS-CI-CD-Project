@@ -1,0 +1,5 @@
+[webservers]
+server01 ansible_host=20.107.217.246 ansible_ssh_user=adminuser
+
+[all:vars]
+ansible_become=yes

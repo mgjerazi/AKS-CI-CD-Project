@@ -1,0 +1,24 @@
+- name: update apt packages
+  hosts: webservers
+  become: true
+  roles:
+    - pre-requisites
+
+- name: instal nginx
+  hosts: webservers
+  become: true
+  roles:
+    - nginx-install
+
+- name: install java
+  hosts: webservers
+  become: true
+  roles:
+    - jre-install
+
+- name: deploy app
+  hosts: webservers
+  become: true
+  roles:
+    - deploy-backend
+    - deploy-frontend
