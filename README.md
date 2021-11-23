@@ -45,6 +45,9 @@ Make sure that you'll be able to proof that backend is inaccessible from the Int
 
 Create a CI/CD pipeline with CI/CD tool of your choice for all of the above (Build code, Prepare docker images, Deploy to AKS).
 
+![image](https://user-images.githubusercontent.com/74839767/142855788-eb1e2163-66cf-4c4b-98c3-602ad0dbd0e2.png)
+
+
 Add monitoring to your Kubernetes cluster. Consider using Prometheus monitoring tool, but any other you’d like will do the work.
 
 Add custom domain, so your frontend can be accessed from “normal” internet address (domain name), not only via IP address.
