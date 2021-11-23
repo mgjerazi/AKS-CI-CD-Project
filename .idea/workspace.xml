@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="Update for Dockerfiles and nginx configuration (optional)">
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/provider-main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/woutputs.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/main.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/variables.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/terraform.tfvars" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/output.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/output.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/providers.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/providers.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/terraform.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" afterDir="false" />
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="2_aks_terraform new script">
+      <change beforePath="$PROJECT_DIR$/Terraform/infrastructure/variables.tf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637581134971</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2_aks_terraform new script">
+      <created>1637658328436</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637658328436</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +201,7 @@
     <MESSAGE value="ansible configs" />
     <MESSAGE value="read me update" />
     <MESSAGE value="Update for Dockerfiles and nginx configuration (optional)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update for Dockerfiles and nginx configuration (optional)" />
+    <MESSAGE value="2_aks_terraform new script" />
+    <option name="LAST_COMMIT_MESSAGE" value="2_aks_terraform new script" />
   </component>
 </project>
