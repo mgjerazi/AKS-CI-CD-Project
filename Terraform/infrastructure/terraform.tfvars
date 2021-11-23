@@ -4,9 +4,9 @@ password = "XfyvP75eOXx5HnbHItEYP6kVBsti.BwE8q"
 /*
 STEPS
 az login
-terraform init
 az ad sp create-for-rbac --skip-assignment
 (copy appId and password to terraform.tfvars)
+terraform init
 terraform validate
 terraform apply
 terraform destroy
