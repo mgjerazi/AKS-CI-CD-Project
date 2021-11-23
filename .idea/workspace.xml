@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="2_aks_terraform new script">
-      <change beforePath="$PROJECT_DIR$/Terraform/infrastructure/variables.tf" beforeDir="false" />
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="infra as a code script">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637658328436</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="infra as a code script">
+      <created>1637658903338</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637658903338</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +209,7 @@
     <MESSAGE value="read me update" />
     <MESSAGE value="Update for Dockerfiles and nginx configuration (optional)" />
     <MESSAGE value="2_aks_terraform new script" />
-    <option name="LAST_COMMIT_MESSAGE" value="2_aks_terraform new script" />
+    <MESSAGE value="infra as a code script" />
+    <option name="LAST_COMMIT_MESSAGE" value="infra as a code script" />
   </component>
 </project>

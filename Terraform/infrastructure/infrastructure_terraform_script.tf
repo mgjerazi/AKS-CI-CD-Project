@@ -33,9 +33,11 @@ resource "azurerm_kubernetes_cluster" "MerkatoCluster" {
     os_disk_size_gb = 30
   }
 
-  identity {
-    type = "SystemAssigned"
-  }
+  /*
+    identity {
+      type = "SystemAssigned"
+    }
+  */
 
   addon_profile {
     http_application_routing {
@@ -43,12 +45,12 @@ resource "azurerm_kubernetes_cluster" "MerkatoCluster" {
     }
   }
 
-  /*
+
   service_principal {
     client_id     = var.appId
     client_secret = var.password
   }
-  */
+
 
   role_based_access_control {
     enabled = true
