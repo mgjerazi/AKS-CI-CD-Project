@@ -5,20 +5,20 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: quiz-backend
+      app: backend
       tier: backend
       track: stable
   replicas: 1
   template:
     metadata:
       labels:
-        app: quiz-backend
+        app: backend
         tier: backend
         track: stable
     spec:
       containers:
-        - name: quiz-backend
-          image: mariolgjerazi/backendquiz
+        - name: backend
+          image: mariolgjerazi/backendquiz:latest
           imagePullPolicy: Always
           ports:
             - name: http
@@ -34,7 +34,7 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: quiz-backend
+    app: backend
     tier: backend
     track: stable
   type: ClusterIP

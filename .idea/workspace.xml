@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="infra as a code script steps">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/nginx.conf" afterDir="false" />
-    </list>
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="frontend and backend docker updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637661695214</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="frontend updates">
+      <created>1637667053870</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637667053870</updated>
+    </task>
+    <task id="LOCAL-00014" summary="frontend and backend docker updates">
+      <created>1637667295783</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637667295783</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +238,8 @@
     <MESSAGE value="infra as a code script" />
     <MESSAGE value="infra as a code script new" />
     <MESSAGE value="infra as a code script steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="infra as a code script steps" />
+    <MESSAGE value="frontend updates" />
+    <MESSAGE value="frontend and backend docker updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend and backend docker updates" />
   </component>
 </project>
