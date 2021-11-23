@@ -1,20 +1,31 @@
 terraform {
+
   required_providers {
     azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      source = "hashicorp/azurerm"
+      version = "2.86.0"
+    }
+
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+      version = "2.6.1"
+    }
+
+    helm = {
+      source = "hashicorp/helm"
     }
   }
+
 }
 
-resource "random_pet" "prefix" {}
-
 provider "azurerm" {
+  # Configuration options
   features {}
 }
 
-resource "azurerm_resource_group" "merkato_group" {
-  name     = "merkato_group"
+
+resource "azurerm_resource_group" "merkato_rg" {
+  name     = "merkato_rg"
   location = "westeurope"
 
   tags = {
@@ -22,17 +33,30 @@ resource "azurerm_resource_group" "merkato_group" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "randomClusterMerkato" {
-  name                = "randomClusterMerkato"
-  location            = azurerm_resource_group.merkato_group.location
-  resource_group_name = azurerm_resource_group.merkato_group.name
-  dns_prefix          = "${random_pet.prefix.id}-k8s"
+resource "azurerm_kubernetes_cluster" "MerkatoCluster" {
+  name                = "MerkatoCluster"
+  location            = azurerm_resource_group.merkato_rg.location
+  resource_group_name = azurerm_resource_group.merkato_rg.name
+  dns_prefix          = "MerkatoClusterAKS"
 
   default_node_pool {
     name            = "default"
     node_count      = 2
-    vm_size         = "Standard_D2_v2"
+    vm_size         = "Standard_DS2_v2"
+    type            = "VirtualMachineScaleSets"
     os_disk_size_gb = 30
+    availability_zones  = [1, 2, 3]
+    enable_auto_scaling = false
+  }
+
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  network_profile {
+    load_balancer_sku = "Standard"
+    network_plugin    = "kubenet"
   }
 
   addon_profile {
@@ -41,21 +65,21 @@ resource "azurerm_kubernetes_cluster" "randomClusterMerkato" {
     }
   }
 
-/*
 
+/*
   service_principal {
     client_id     = var.appId
     client_secret = var.password
   }
-
 */
+
 
   role_based_access_control {
     enabled = true
   }
 
   tags = {
-    environment = "Demo"
+    environment = "PROD"
   }
 }
 
@@ -69,9 +93,9 @@ provider "helm" {
   }
 }
 
-resource "kubernetes_namespace" "final-project" {
+resource "kubernetes_namespace" "production" {
   metadata {
-    name = "final-project"
+    name = "production"
   }
 }
 #Backend Deployments
@@ -79,7 +103,7 @@ resource "kubernetes_namespace" "final-project" {
 resource "kubernetes_deployment" "backend" {
   metadata {
     name      = "quiz-backend-update"
-    namespace = "final-project"
+    namespace = "production"
   }
   spec {
     replicas = 2
@@ -97,7 +121,7 @@ resource "kubernetes_deployment" "backend" {
       spec {
 
         container {
-          image             = "mariolgjerazi/backendquiz"
+          image             = "mariolgjerazi/backendquiz:latest"
           name              = "quiz-backend-update"
           image_pull_policy = "Always"
           port {
@@ -112,7 +136,7 @@ resource "kubernetes_deployment" "backend" {
 resource "kubernetes_service" "backendservice" {
   metadata {
     name      = "quiz-backend-update"
-    namespace = "final-project"
+    namespace = "production"
   }
   spec {
     type     = "ClusterIP"
@@ -130,7 +154,7 @@ resource "kubernetes_service" "backendservice" {
 resource "kubernetes_deployment" "frontend" {
   metadata {
     name      = "frontend"
-    namespace = "final-project"
+    namespace = "production"
   }
   spec {
     replicas = 2
@@ -148,7 +172,7 @@ resource "kubernetes_deployment" "frontend" {
       spec {
 
         container {
-          image             = "mariolgjerazi/frontendquiz"
+          image             = "mariolgjerazi/frontendquiz:latest"
           name              = "frontend"
           image_pull_policy = "Always"
           port {
@@ -160,10 +184,10 @@ resource "kubernetes_deployment" "frontend" {
   }
 }
 
-resource "kubernetes_service" "frontend" {
+resource "kubernetes_service" "frontendservice" {
   metadata {
     name      = "frontend"
-    namespace = "final-project"
+    namespace = "production"
   }
   spec {
     type     = "ClusterIP"
@@ -183,7 +207,7 @@ resource "helm_release" "ingress_nginx" {
   name       = "ingress-nginx"
   repository = "https://kubernetes.github.io/ingress-nginx"
   chart      = "ingress-nginx"
-  namespace  = "final-project"
+  namespace  = "production"
   timeout    = 300
 
 }
@@ -195,7 +219,7 @@ resource "kubernetes_ingress" "ingress-front-back" {
       app = "ingress-nginx"
     }
     name        = "ingress-front-back"
-    namespace   = "final-project"
+    namespace   = "production"
     annotations = {
       "kubernetes.io/ingress.class" : "nginx"
       "nginx.ingress.kubernetes.io/ssl-redirect" : "false"

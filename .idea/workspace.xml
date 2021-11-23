@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="read me update">
-      <change afterPath="$PROJECT_DIR$/Frontend/nginx/default.conf" afterDir="false" />
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="Update for Dockerfiles and nginx configuration (optional)">
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/provider-main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/woutputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/terraform.tfvars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Terraform/infrastructure/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/output.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/output.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/providers.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/providers.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraformOld/terraform.tfvars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/2_aks_terraform/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" beforeDir="false" afterPath="$PROJECT_DIR$/Terraform/infrastructure/infrastructure_terraform_script.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -163,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637580644161</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update for Dockerfiles and nginx configuration (optional)">
+      <created>1637581134971</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637581134971</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,12 +198,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="nginx conf" />
     <MESSAGE value="ingress namespace config" />
     <MESSAGE value="terraform and bash scripts" />
     <MESSAGE value="read me file update" />
     <MESSAGE value="ansible configs" />
     <MESSAGE value="read me update" />
-    <option name="LAST_COMMIT_MESSAGE" value="read me update" />
+    <MESSAGE value="Update for Dockerfiles and nginx configuration (optional)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for Dockerfiles and nginx configuration (optional)" />
   </component>
 </project>
