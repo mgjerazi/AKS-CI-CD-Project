@@ -68,4 +68,4 @@ script to automate the whole flow
 
 Create two clusters in AKS - Prod & Test
 Configure your CI/CD to automatically deploy to Test cluster
-Create a manual deployment to Prod cluster
+Create a manual deployment to Prod cluster .
