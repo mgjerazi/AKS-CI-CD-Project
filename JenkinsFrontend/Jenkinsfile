@@ -1,0 +1,40 @@
+pipeline {
+  environment {
+    imagename = "mariolgjerazi/frontquizaks"
+  }
+  agent any
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/mgjerazi/AKS_Docker_Terraform_Ansible_AzureDevOpsPipelines.git'
+      }
+    }
+    stage('Build Image') {
+      steps{
+        sh "cd Frontend && docker build -t ${imagename}:${BUILD_ID} ."
+      }
+    }
+    stage('Push Image') {
+      steps{
+        withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            sh "docker login -u mariolgjerazi -p ${PASSWORD}"
+            sh "docker push ${imagename}:${BUILD_ID}"
+        }
+      }
+    }
+    stage('Remove unused docker image') {
+      steps{
+        sh "docker rmi ${imagename}:${BUILD_ID}"
+      }
+    }
+    stage('Deploy image to AKS-Test') {
+      steps{
+          withCredentials([usernamePassword(credentialsId: 'AZURE', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            sh "az login -u ${USERNAME} -p ${PASSWORD}"
+            sh "az aks get-credentials --resource-group merkato_rg --name k8s-quiz-test"
+            sh "kubectl set image deployment/frontend frontend=frontquizaks=${imagename}:${BUILD_ID}"
+        }
+      }
+    }
+  }
+}
