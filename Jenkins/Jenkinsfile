@@ -22,5 +22,4 @@ node {
             sh "kubectl set image deployment/backend backend=backendquiz=${imagename}:${BUILD_ID}"
       }
     }
-  }
 }
