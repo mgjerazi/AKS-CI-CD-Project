@@ -31,7 +31,6 @@ pipeline {
       steps{
           withCredentials([usernamePassword(credentialsId: 'AZURE', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "az login -u ${USERNAME} -p ${PASSWORD}"
-            sh "az aks install-cli"
             sh "az aks get-credentials --resource-group merkato_rg --name k8s-quiz-test"
             sh "kubectl set image deployment/backend backend=backendquiz=${imagename}:${BUILD_ID}"
         }
