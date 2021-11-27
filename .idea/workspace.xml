@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="jenkins backendfinal">
-      <change afterPath="$PROJECT_DIR$/JenkinsFrontend/Jenkinsfile" afterDir="false" />
+    <list default="true" id="0efee0ab-f181-4002-b227-e7921b1ca62a" name="Changes" comment="jenkins frontend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638010433385</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="jenkins frontend">
+      <created>1638011124403</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1638011124403</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +324,7 @@
     <MESSAGE value="jenkins backend3" />
     <MESSAGE value="jenkins backend5" />
     <MESSAGE value="jenkins backendfinal" />
-    <option name="LAST_COMMIT_MESSAGE" value="jenkins backendfinal" />
+    <MESSAGE value="jenkins frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="jenkins frontend" />
   </component>
 </project>
