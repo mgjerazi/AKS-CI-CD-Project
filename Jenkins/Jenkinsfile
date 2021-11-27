@@ -1,7 +1,6 @@
 pipeline {
   environment {
     imagename = "mariolgjerazi/backendquiz"
-    AZURE_SUBSCRIPTION_ID = "SDA DevOps Lufthansa Subscription"
   }
   agent any
   stages {
@@ -32,7 +31,6 @@ pipeline {
       steps{
           withCredentials([usernamePassword(credentialsId: 'AZURE', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "az login -u ${USERNAME} -p ${PASSWORD}"
-            sh "az account set -s ${AZURE_SUBSCRIPTION_ID}"
             sh "az aks install-cli"
             sh "az aks get-credentials --resource-group merkato_rg --name k8s-quiz-test"
             sh "kubectl set image deployment/backend backend=backendquiz=${imagename}:${BUILD_ID}"
