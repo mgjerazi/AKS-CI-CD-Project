@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: mariolgjerazi/frontendquiz
+          image: mariolgjerazi/frontquizaks:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
