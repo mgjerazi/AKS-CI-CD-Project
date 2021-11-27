@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/mgjerazi/AKS_Docker_Terraform_Ansible_AzureDevOpsPipelines.git', branch: 'main', credentialsId: 'GIT'])
+        git 'https://github.com/mgjerazi/AKS_Docker_Terraform_Ansible_AzureDevOpsPipelines.git'
       }
     }
     stage('Build Image') {
