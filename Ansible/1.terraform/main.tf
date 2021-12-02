@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "main" {
-  name     = "tf-rg-merkato"
+  name     = "merkato_rg"
   location = "North Europe"
 }
 

@@ -1,0 +1,9 @@
+#STEPS
+#ng build --prod
+#docker build -t frontquizaks .
+#docker run -p 62:80 -d --name frontendquizaks frontendquizaks
+#docker login
+#docker images
+#docker tag frontquizaks:latest mariolgjerazi/frontquizaks
+#docker push mariolgjerazi/frontquizaks
+#kubectl get deploy,svc,ing

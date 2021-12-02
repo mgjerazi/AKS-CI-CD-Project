@@ -8,7 +8,7 @@ import {UserAnswerDto} from './dtos/userAnswer.dto';
 })
 export class DataService {
 //     private REST_API_SERVER = "http://localhost:8080/api/quiz";
-    private REST_API_SERVER = window.origin + "/api/quiz";
+        private REST_API_SERVER = window.origin + "/api/quiz";
 
 
     constructor(private httpClient: HttpClient) { }
