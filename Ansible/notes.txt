@@ -19,3 +19,62 @@ npm run build
 
 cp -a ~/Desktop/final/3.\ app/quiz-frontend/dist/quiz-frontend ~/Desktop/final/2.\ ansible/roles/deploy-frontend/files/
 
+
+ADD Ingress Rule
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent  #  or --add-service=http
+sudo firewall-cmd --reload
+
+sudo vi nginx.conf
+include /etc/nginx/sites-available/default;
+******************************************************
+mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+******************************************************************************************************************************************
+ansible all --key-file ~/.ssh/ansible -i hosts -m ping
+
+ansible --list-host all
+ansible all -m ping
+
+STEPS
+1.INSTALL ANSIBLE
+sudo yum -y install yum-utils
+yum install ansible -y
+sudo install git
+sudo yum install python-pip
+sudo pip install virtualenv
+
+2.EDIT HOST FILE
+vi /etc/ansible/hosts
+[testing]
+130.61.43.193 ansible_ssh_user = opc ansible_ssh_pass = pass123
+[internal]
+10.45.1.16 ansible_ssh_user = opc ansible_ssh_private_key_file=/home/opc/.ssh/merkato
+3.WRITE PLAYBOOK
+check
+ansible-playbook filename.yml --syntax-check
+Output: playbook: filename.yml
+4.execute playbook command
+ansible-playbook filename.yml
+
+*******************************************************SSH-KEYS*******************************************************
+ssh-keygen -t ed25519 -C "ssh for ansible"
+ssh-keygen -t ed25519 -C "ssh for ansible"
+passphrase test123
+ssh-copy-id -i ~/.ssh/id_ed25519.pub 10.45.1.16(destination ip)
+paste key to /user/.ssh/authorized_keys
+testing
+ssh -i ~/.ssh/ansible 10.45.1.16(destination ip)
+
+SSH-Background Cache
+eval $(ssh-agent)
+ps aux | grep PIDnr
+ssh-add
+Identity added
+
+alias ssha='eval $(ssh-agent) && ssh-add'
+ssha
+save the session for alias ssh
+nano .bashrc
+####
+# ssh agent
+alias ssha='eval $(ssh-agent) && ssh-add'
